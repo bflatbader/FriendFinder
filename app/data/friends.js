@@ -1,0 +1,55 @@
+var friends = [
+    {
+        "name":"Steve",
+        "photo":"https://hips.hearstapps.com/cos.h-cdn.co/assets/cm/14/25/53a065fcc1a48_-_cos-dream-phone-steve-26200977.jpg",
+        "scores":[
+            4,
+            1,
+            5,
+            1
+          ]
+    },
+    {
+        "name":"Bob",
+        "photo":"https://hips.hearstapps.com/cos.h-cdn.co/assets/cm/14/25/53a0660bad413_-_cos-dream-phone-bob-50712125.jpg",
+        "scores":[
+            2,
+            1,
+            1,
+            1
+          ]
+    },
+    {
+        "name":"Tyler",
+        "photo":"https://hips.hearstapps.com/cos.h-cdn.co/assets/cm/14/25/53a0660390587_-_cos-dream-phone-tyler-4280877.jpg",
+        "scores":[
+            4,
+            1,
+            1,
+            1
+          ]
+    },
+    {
+        "name":"Dan",
+        "photo":"https://hips.hearstapps.com/cos.h-cdn.co/assets/cm/14/25/53a065ed4c468_-_cos-dream-phone-dan-50641507.jpg",
+        "scores":[
+            5,
+            1,
+            1,
+            1
+          ]
+    },             
+    {
+        "name":"Scott",
+        "photo":"https://hips.hearstapps.com/cos.h-cdn.co/assets/cm/14/25/53a065ea34f4b_-_cos-dream-phone-scott-21579059.jpg",
+        "scores":[
+            2,
+            5,
+            1,
+            1
+          ]
+    }  
+];
+
+// Export for use in other files
+module.exports = friends;
