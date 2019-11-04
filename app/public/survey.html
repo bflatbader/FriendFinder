@@ -235,12 +235,16 @@ $(".submit").on("click", function(event) {
         }
         
         // Tell me the best friend match
+        console.log(comaptibility);
         console.log("Absolute Best Friend: " + bestFriend.name);
+
+        percentMatch = (100 - ((bestFriend.totalDifferences / 40) * 100));
 
         friendInfo = `
         <h3>${bestFriend.name}</h3>
         <p class="lead"><i>They'll really like you!</i></p>
         <img src="${bestFriend.pic}">
+        <h5>${percentMatch}% Match</h5>
         `
 
         $( ".modal-body" ).html(friendInfo);
