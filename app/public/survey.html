@@ -211,6 +211,15 @@ $(".submit").on("click", function(event) {
             answers.push(ans[i]);
         }
 
+        // Create new friend object
+        newFriend = {"name": userName, "photo": pic, "scores": answers};
+
+        // Post new friend data
+        $.post("/api/friends", newFriend)
+        .then(function(data) {
+            console.log("Adding friends", data);
+        });
+
         // Compare friend answers to users answers
         for (i in friendsResults) {
             friendName = friendsResults[i].name;
