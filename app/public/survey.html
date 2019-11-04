@@ -32,7 +32,7 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
-                            <option value="4">5 (Strongly Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
                         </select>
                         <h5>Question 2</h5>
                         <p>My favorite thing to wear is anything yellow.</p>
@@ -42,7 +42,7 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
-                            <option value="4">5 (Strongly Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
                         </select>
                         <h5>Question 3</h5>
                         <p>Skateboarding is my passion.</p>
@@ -52,7 +52,7 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
-                            <option value="4">5 (Strongly Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
                         </select>
                         <h5>Question 4</h5>
                         <p>You will never see my hair because I'm always wearing a hat.</p>
@@ -62,10 +62,10 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
-                            <option value="4">5 (Strongly Agree)</option>
+                            <option value="5">5 (Strongly Agree)</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary ">Submit</button>
+                    <button type="submit" class="btn btn-primary submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -75,9 +75,76 @@
         <div class="row">
             <div class="col-md-12">
                 <hr>
-                <p><a href="/api/friends">API Friends List</a> | GitHub Repo</p>
+                <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/bflatbader/FriendFinder">GitHub Repo</a></p>
             </div>
         </div>
     </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<!-- Custom JavaScript -->
+<script type="text/javascript">
+var answers = [];
+var comaptibility = [];
+var friendsAPI = "/api/friends";
+
+// When user clicks to submit the survey
+$(".submit").on("click", function(event) {
+    event.preventDefault();
+
+    // AJAX request
+    $.ajax({
+        url: friendsAPI,
+        method: "GET"
+    })
+    // After data comes back from the request
+    .then(function (friendsResults) {
+        // Get user data
+        var userName = $("#name").val().trim();
+        var pic = $("#picURL").val().trim();
+
+        // Get all answers
+        var ans = {
+            a1: $("#q1").val().trim(),
+            a2: $("#q2").val().trim(),
+            a3: $("#q3").val().trim(),
+            a4: $("#q4").val().trim()
+        };
+
+        // Convert answers to array
+        for (i in ans) {
+            answers.push(ans[i]);
+        }
+
+        // Compare friend answers to users answers
+        for (i in friendsResults) {
+            friendName = friendsResults[i].name;
+            friendAnswers = friendsResults[i].scores;
+            friendPic = friendsResults[i].photo;
+            differences = 0;
+            for(x in friendAnswers) {
+                differences += Math.abs(friendAnswers[x] - answers[x]);
+            }
+            friend = {name: friendName, pic: friendPic, totalDifferences: differences};
+            comaptibility.push(friend);
+        }
+
+        // Find the friend with the least difference
+        var lowest = Number.POSITIVE_INFINITY;
+        for (y in comaptibility) {
+            if (comaptibility[y].totalDifferences < lowest) {
+                lowest = comaptibility[y].totalDifferences;
+                bestFriend = comaptibility[y];
+                console.log("Current Best Friend: " + bestFriend.name);
+            }
+        }
+        
+        // Tell me the best friend match
+        console.log("Absolute Best Friend: " + bestFriend.name);
+        console.log(comaptibility);
+    });
+});
+</script>
