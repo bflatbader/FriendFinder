@@ -1,3 +1,65 @@
+body {
+    background-image: url("../images/art-background-blue-370799.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+img {
+    padding-top: 10px;
+}
+
 h5, label {
     padding-top: 15px;
+}
+
+a {
+    color: #4f4f4f; 
+}
+
+a:hover {
+    color: #333333; 
+}
+
+.jumbotron {
+    background: none
+}
+
+.btn-purp {
+    background-color: #505091;
+    color: #edecee;
+}
+
+.btn-purp:hover {
+    background-color: #3e3e70;
+    color: #edecee;
+}
+
+.dialNum {
+    font-size: 30px;
+    color: #333333;
+}
+
+.padText {
+    font-size: 10px;
+}
+
+.phoneBtns {
+    padding: 20px 18px 2px 18px;
+    line-height: 10px;
+    background-color: #ffffff;
+}
+
+.selectedPhoneBtn {
+    padding: 20px 18px 2px 18px;
+    line-height: 10px;
+    background-color: #dc3992;
+}
+
+.sendBtns {
+    margin-top: 10px;
+    font-size: 30px;
 }

@@ -9,8 +9,8 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/eeaaa00cac.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <title>Survey</title>
@@ -38,8 +38,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="display-4">Survey Questions</h1>
-                <hr>
+                <div class="text-right">
+                    <p class="display-4">Survey Questions</h1>
+                    <img src="images/phone.png">
+                </div>
                 <h3>About You</h3>
                 <form>
                     <div class="form-group">
@@ -47,109 +49,254 @@
                         <input type="text" class="form-control" id="name" placeholder="John Smith" required>
                         <label for="picURL">URL for Photo</label>
                         <input type="text" class="form-control" id="picURL" placeholder="https://i.imgur.com/mqY2gla.png" required>
+                        <br>
                         <hr>
+                        <p class="lead"><i>Answer the questions below, where 1 represents agreeing the least and 5 represents agreeing the most.</i></p>
                         <h5>Question 1</h5>
-                        <p>The best first date is going to the movies.</p>
-                        <select class="form-control" id="q1" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <p>The best first date is going to the movies.</p>                        
+                        <div class="input-group-prepend" id="q1">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>                        
                         <h5>Question 2</h5>
                         <p>My favorite thing to wear is anything yellow.</p>
-                        <select class="form-control" id="q2" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q2">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>       
                         <h5>Question 3</h5>
                         <p>Skateboarding is my passion.</p>
-                        <select class="form-control" id="q3" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q3">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>       
                         <h5>Question 4</h5>
                         <p>You will never see my hair because I'm always wearing a hat.</p>
-                        <select class="form-control" id="q4" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q4">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>       
                         <h5>Question 5</h5>
                         <p>I love hot dogs.</p>
-                        <select class="form-control" id="q5" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q5">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>       
                         <h5>Question 6</h5>
                         <p>I'm in athleisure wear 24/7.</p>
-                        <select class="form-control" id="q6" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q6">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>       
                         <h5>Question 7</h5>
                         <p>Baseball is the greatest American pastime.</p>
-                        <select class="form-control" id="q7" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q7">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>       
                         <h5>Question 8</h5>
                         <p>I look cool in whatever I wear.</p>
-                        <select class="form-control" id="q8" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q8">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>
                         <h5>Question 9</h5>
                         <p>The mall is the best place to go shopping.</p>
-                        <select class="form-control" id="q9" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q9">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>
                         <h5>Question 10</h5>
                         <p>Ice cream is my favorite dessert.</p>
-                        <select class="form-control" id="q10" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
+                        <div class="input-group-prepend" id="q10">
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
+                                <p class="dialNum">1</p>
+                                <p class="padText">&nbsp;</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="2">
+                                <p class="dialNum">2</p>
+                                <p class="padText">ABC</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="3">
+                                <p class="dialNum">3</p>
+                                <p class="padText">DEF</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="4">
+                                <p class="dialNum">4</p>
+                                <p class="padText">GHI</p>
+                            </button>
+                            <button class="btn btn-outline-secondary phoneBtns" type="button" value="5">
+                                <p class="dialNum">5</p>
+                                <p class="padText">MNO</p>
+                            </button>    
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-secondary sendBtns disabled"><i class="fas fa-asterisk"></i></button>
+                    <button type="submit" class="btn btn-success sendBtns submit"><i class="fas fa-phone"></i></button>
+                    <button type="button" class="btn btn-secondary sendBtns disabled"><i class="fas fa-hashtag"></i></button>
                 </form>
             </div>
         </div>
@@ -157,7 +304,7 @@
     <!-- Footer -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-right">
                 <hr>
                 <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/bflatbader/FriendFinder">GitHub Repo</a></p>
             </div>
@@ -168,14 +315,68 @@
 
 <!-- Custom JavaScript -->
 <script type="text/javascript">
+// VARIABLES
 var answers = [];
 var comaptibility = [];
 var friendsAPI = "/api/friends";
+var ans = {};
 
+// Get values from selected answers in the survey and push to ans object
+$(".btn-outline-secondary").on("click", function(event) {
+    // Toggle which buttons are selected
+    $(this).addClass('selectedPhoneBtn').siblings().removeClass('selectedPhoneBtn');
+    // Get the question ID
+    id = $(this).closest("div").prop("id");
+    
+    // Add the question's answer to the ans object, this will also replace any previous answers
+    switch (id) {
+        case 'q1':
+            ans['a1'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q2':
+            ans['a2'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q3':
+            ans['a3'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q4':
+            ans['a4'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q5':
+            ans['a5'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q6':
+            ans['a6'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q7':
+            ans['a7'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q8':
+            ans['a8'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q9':
+            ans['a9'] = $(this).val().trim();
+            console.log(ans);
+            break;
+        case 'q10':
+            ans['a10'] = $(this).val().trim();
+            console.log(ans);
+            break;
+    };
+});
+
+// Close modal dialog box handling
 $(".modalClose").on("click", function(event) {
     $('.modal').hide();
 });
-
 
 // When user clicks to submit the survey
 $(".submit").on("click", function(event) {
@@ -191,20 +392,6 @@ $(".submit").on("click", function(event) {
         // Get user data
         var userName = $("#name").val().trim();
         var pic = $("#picURL").val().trim();
-
-        // Get all answers
-        var ans = {
-            a1: $("#q1").val().trim(),
-            a2: $("#q2").val().trim(),
-            a3: $("#q3").val().trim(),
-            a4: $("#q4").val().trim(),
-            a5: $("#q5").val().trim(),
-            a6: $("#q6").val().trim(),
-            a7: $("#q7").val().trim(),
-            a8: $("#q8").val().trim(),
-            a9: $("#q9").val().trim(),
-            a10: $("#q10").val().trim()
-        };
 
         // Convert answers to array
         for (i in ans) {
