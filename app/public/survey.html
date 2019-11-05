@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- BootStrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- BootStrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/eeaaa00cac.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Roboto&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <title>Survey</title>
@@ -38,11 +42,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="text-right">
+                <img src="./images/logo.png" class="img-fluid" id="surveyLogo" alt="Responsive image">
+            </div> 
+            <div class="col-md-12">
+                <div class="text-right" id="surveyHeader">
                     <p class="display-4">Survey Questions</h1>
                     <img src="images/phone.png">
                 </div>
-                <h3>About You</h3>
+                <h1>About You</h1>
                 <form>
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -51,8 +58,9 @@
                         <input type="text" class="form-control" id="picURL" placeholder="https://i.imgur.com/mqY2gla.png" required>
                         <br>
                         <hr>
-                        <p class="lead"><i>Answer the questions below, where 1 represents agreeing the least and 5 represents agreeing the most.</i></p>
-                        <h5>Question 1</h5>
+                        <p class="lead">Answer the questions below, where 1 represents agreeing the least and 5 represents agreeing the most.</p>
+                        <br>
+                        <h2>Question 1</h2>
                         <p>The best first date is going to the movies.</p>                        
                         <div class="input-group-prepend" id="q1">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -76,7 +84,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>                        
-                        <h5>Question 2</h5>
+                        <h2>Question 2</h2>
                         <p>My favorite thing to wear is anything yellow.</p>
                         <div class="input-group-prepend" id="q2">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -100,7 +108,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>       
-                        <h5>Question 3</h5>
+                        <h2>Question 3</h2>
                         <p>Skateboarding is my passion.</p>
                         <div class="input-group-prepend" id="q3">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -124,7 +132,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>       
-                        <h5>Question 4</h5>
+                        <h2>Question 4</h2>
                         <p>You will never see my hair because I'm always wearing a hat.</p>
                         <div class="input-group-prepend" id="q4">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -148,7 +156,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>       
-                        <h5>Question 5</h5>
+                        <h2>Question 5</h2>
                         <p>I love hot dogs.</p>
                         <div class="input-group-prepend" id="q5">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -172,7 +180,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>       
-                        <h5>Question 6</h5>
+                        <h2>Question 6</h2>
                         <p>I'm in athleisure wear 24/7.</p>
                         <div class="input-group-prepend" id="q6">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -196,7 +204,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>       
-                        <h5>Question 7</h5>
+                        <h2>Question 7</h2>
                         <p>Baseball is the greatest American pastime.</p>
                         <div class="input-group-prepend" id="q7">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -220,7 +228,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>       
-                        <h5>Question 8</h5>
+                        <h2>Question 8</h2>
                         <p>I look cool in whatever I wear.</p>
                         <div class="input-group-prepend" id="q8">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -244,7 +252,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>
-                        <h5>Question 9</h5>
+                        <h2>Question 9</h2>
                         <p>The mall is the best place to go shopping.</p>
                         <div class="input-group-prepend" id="q9">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -268,7 +276,7 @@
                                 <p class="padText">MNO</p>
                             </button>    
                         </div>
-                        <h5>Question 10</h5>
+                        <h2>Question 10</h2>
                         <p>Ice cream is my favorite dessert.</p>
                         <div class="input-group-prepend" id="q10">
                             <button class="btn btn-outline-secondary phoneBtns" type="button" value="1">
@@ -295,7 +303,7 @@
                     </div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <button type="button" class="btn btn-secondary sendBtns disabled"><i class="fas fa-asterisk"></i></button>
-                    <button type="submit" class="btn btn-success sendBtns submit"><i class="fas fa-phone"></i></button>
+                    <button type="submit" class="btn btn-success sendBtns submit" id="phoneCall" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?"><i class="fas fa-phone"></i></button>
                     <button type="button" class="btn btn-secondary sendBtns disabled"><i class="fas fa-hashtag"></i></button>
                 </form>
             </div>
@@ -310,6 +318,16 @@
             </div>
         </div>
     </div>
+    <!-- Warning -->
+    <div id="message">
+        <div id="Warning" class="alert alert-warning alert-dismissible fade Hidden" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below. Missing name, photo, or a question is unanswered.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    <!-- JavaScript -->
     <script src="/scripts/app.js"></script>
 </body>
 </html>

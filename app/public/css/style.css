@@ -6,13 +6,11 @@ body {
     background-size: cover;
     overflow-y: auto;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #313131;
 }
 
-img {
-    padding-top: 10px;
-}
-
-h5, label {
+h2, label {
     padding-top: 15px;
 }
 
@@ -26,6 +24,18 @@ a:hover {
 
 .jumbotron {
     background: none
+}
+
+.display-4, h1, h2 {
+    font-family: 'Caveat', cursive;
+}
+
+.display-4 { 
+    font-size: 70px;
+}
+
+.lead {
+    color: #414141;
 }
 
 .btn-purp {
@@ -56,10 +66,28 @@ a:hover {
 .selectedPhoneBtn {
     padding: 20px 18px 2px 18px;
     line-height: 10px;
-    background-color: #dc3992;
+    background-color: #DB74AC;
 }
 
 .sendBtns {
     margin-top: 10px;
     font-size: 30px;
+}
+
+#message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#surveyLogo {
+    width: 70%;
+    padding-top: 20px;
+    position: absolute;
+}
+
+#surveyHeader {
+    margin-top: 140px;
 }
