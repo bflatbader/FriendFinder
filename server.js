@@ -9,6 +9,8 @@ var PORT = process.env.PORT || 8080;
 // Data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// Default directory
+app.use(express.static(path.join(__dirname, 'app/public')));
 
 // Router
 require("./app/routes/apiRoutes")(app);
