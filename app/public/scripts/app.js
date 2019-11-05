@@ -2,14 +2,23 @@
 function touchToneDial (question, value) {
     // Add answer to ans object
     key = 'a' + question;
-    console.log(key);
-    ans[key] = value;
+    ans[key] = value, 10;
 
     audioFile = "/audio/" + value + ".mp3"
     touchTone = new Audio(audioFile);
     touchTone.play();
 
     console.log(ans);
+}
+
+// Function reset form
+function resetForm () {
+    answers = [];
+    comaptibility = [];
+    ans = {};
+    $('#name').val("");
+    $('#picURL').val("");
+    $('.phoneBtns').removeClass('selectedPhoneBtn');
 }
 
 // VARIABLES
@@ -23,6 +32,7 @@ var phoneRing = new Audio('/audio/ring.wav');
 // Close modal dialog box handling
 $(".modalClose").on("click", function(event) {
     $('.modal').hide();
+    resetForm();
 });
 
 // Get values from selected answers in the survey and push to ans object
